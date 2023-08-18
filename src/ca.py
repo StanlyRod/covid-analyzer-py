@@ -9,6 +9,7 @@ currentDirectory = os.getcwd()
 #read excel file
 try:
     readxlsx = pd.read_excel(f"{currentDirectory}\Deaths.xlsx")
+
 except FileNotFoundError as fne:
     print(f"File or directory not found  {fne.filename}")
     sys.exit()
@@ -32,6 +33,19 @@ def CountryInputToUpper(entryTxt):
     wordsToUpper = list(map(lambda words: words.capitalize(), toAList))
     toString = " ".join(wordsToUpper)
     return toString
+
+
+def commands():
+    print()
+    print("COMMANDS MENU")
+    print("ld   => To analyze covid deaths by country and gender")
+    print("fv   => To analyze full vaccinations by country and gender")
+    print("exit => Exit the program")
+    print()
+
+
+def AnalyzeDeathsByGender():
+    
 
 
 #function that plot the results in a bar chart
@@ -68,3 +82,11 @@ except (IndexError, NameError, TypeError):
     print("Incorrect country name please try again.")
 
 
+def main():
+    print("Covid analyzer")
+    commands()
+
+    while(True):
+        command = input("Command: ").lower()
+
+        if(command == "ld"):
