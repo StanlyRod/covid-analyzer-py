@@ -10,7 +10,7 @@ currentDirectory = os.getcwd()
 try:
     readxlsx = pd.read_excel(f"{currentDirectory}\Deaths.xlsx")
 except FileNotFoundError as fne:
-    print(f"File or directory not found {fne.filename}")
+    print(f"File or directory not found  {fne.filename}")
     sys.exit()
 
 
