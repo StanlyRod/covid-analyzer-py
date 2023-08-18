@@ -15,7 +15,7 @@ except FileNotFoundError as fne:
     sys.exit()
 
 
-#get the country index value
+#get the country index value of the excel file
 def CountryIndex(conName):
     index_value = readxlsx.index[readxlsx['country'] == conName].tolist()[0]
     return index_value
@@ -35,21 +35,20 @@ def CountryInputToUpper(entryTxt):
     return toString
 
 
+#display all the commands
 def commands():
     print()
     print("COMMANDS MENU")
-    print("ld   => To analyze covid deaths by country and gender")
-    print("fv   => To analyze full vaccinations by country and gender")
-    print("exit => Exit the program")
+    print("ld   - To analyze covid deaths by country and gender")
+    print("fv   - To analyze full vaccinations by country and gender")
+    print("cmd  - To list all the commands available")
+    print("exit - Exit the program")
     print()
 
 
-def AnalyzeDeathsByGender():
-    
-
 
 #function that plot the results in a bar chart
-def PlotResults(maleDeaths, femaleDeaths, conName, totalDeaths):
+def PlotDeathsResults(maleDeaths, femaleDeaths, conName, totalDeaths):
     fig, ax = plt.subplots()
 
     gender      = ["Male", "Female"]
@@ -64,29 +63,49 @@ def PlotResults(maleDeaths, femaleDeaths, conName, totalDeaths):
     plt.show()
 
 
-countryInput = input("Insert a country name: ")
-countryName  = CountryInputToUpper(countryInput)
+#display the death final results
+def DeathResults():
+    countryInput = input("Insert a country name: ")
+    countryName  = CountryInputToUpper(countryInput)
 
-try:
+    try:
 
-    index = CountryIndex(countryName)
-    totalDeaths  = GetColumnValue(index, "total")
-    maleDeaths   = GetColumnValue(index, "male")
-    femaleDeaths = GetColumnValue(index, "female")
-    
-    print(f"{index} Total deaths:{int(totalDeaths)}  male:{maleDeaths}%  female:{femaleDeaths}%")
+        index = CountryIndex(countryName)
+        totalDeaths  = GetColumnValue(index, "total")
+        maleDeaths   = GetColumnValue(index, "male")
+        femaleDeaths = GetColumnValue(index, "female")
+        
+        print(f"{index} Total deaths:{int(totalDeaths)}  male:{maleDeaths}%  female:{femaleDeaths}%")
 
-    PlotResults(maleDeaths, femaleDeaths, countryName, totalDeaths)
+        PlotDeathsResults(maleDeaths, femaleDeaths, countryName, totalDeaths)
 
-except (IndexError, NameError, TypeError):
-    print("Incorrect country name please try again.")
+    except (IndexError, NameError, TypeError):
+        print("Incorrect country name please try again.")
+        commands()
 
 
+#main function
 def main():
-    print("Covid analyzer")
+    print()
+    print("Covid Analyzer")
     commands()
 
     while(True):
         command = input("Command: ").lower()
 
         if(command == "ld"):
+            DeathResults()
+
+        elif(command == "cmd"):
+            commands()
+
+        elif(command == "exit"):
+            break
+
+        else:
+            print("Invalid command please try again.")
+            print()
+
+
+if __name__ == "__main__":
+    main()
