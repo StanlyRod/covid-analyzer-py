@@ -1,3 +1,4 @@
+
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
@@ -50,16 +51,32 @@ def commands():
 #function that plot the results in a bar chart
 def PlotDeathsResults(maleDeaths, femaleDeaths, conName, totalDeaths):
     fig, ax = plt.subplots()
-
+    ax.set_facecolor('gray')   #ax in gray color
+    fig.set_facecolor("black") #fig in black color
+    
     gender      = ["Male", "Female"]
     count       = [maleDeaths, femaleDeaths]
-    bars_label  = ["Male", "Female"]
-    bars_colors = ['tab:blue', 'tab:pink']
+    bars_label  = [f"Male {round(maleDeaths)}%", f"Female {round(femaleDeaths)}%"]
+    bars_colors = ['tab:purple', 'tab:pink']
 
     ax.bar(gender, count, label=bars_label, color=bars_colors, width=0.4)
-    ax.set_ylabel("Total deaths in percentage %")
-    ax.set_title(f"Total deaths in {conName} by gender {int(totalDeaths)}")
+    ax.set_ylabel("Total deaths in percentage %", color='white')
+    ax.set_title(f"Total deaths in {conName} by gender {int(totalDeaths)}", color='white')
     ax.legend(title="Gender")
+
+    #set frame width 
+    ax.spines['bottom'].set_linewidth(3)
+    ax.spines['top'].set_linewidth(3)
+    ax.spines['left'].set_linewidth(3)
+    ax.spines['right'].set_linewidth(3)
+ 
+    #set frame color
+    ax.spines['bottom'].set_color('white')
+    ax.spines['top'].set_color('white')
+    ax.spines['left'].set_color('white')
+    ax.spines['right'].set_color('white')
+
+    ax.tick_params(labelcolor='orange')
     plt.show()
 
 
