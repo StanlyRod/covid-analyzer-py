@@ -7,24 +7,34 @@ import sys
 #get current directory
 currentDirectory = os.getcwd()
 
-#read excel file
-try:
-    readxlsx = pd.read_excel(f"{currentDirectory}\Deaths.xlsx")
+dfile = f"{currentDirectory}\deaths.xlsx"
+vfile = f"{currentDirectory}\\full_vaccinations.xlsx"
 
-except FileNotFoundError as fne:
-    print(f"File or directory not found  {fne.filename}")
-    sys.exit()
+
+#read excel files and catch the filenotfound error exception
+def ReadExcelFile(xfile):
+     try:
+        readxfile = pd.read_excel(xfile)
+        return readxfile
+
+     except FileNotFoundError as fne:
+        print(f"File or directory not found  {fne.filename}")
+        sys.exit()
+
+
+readxdfile = ReadExcelFile(dfile)
+readxvfile = ReadExcelFile(vfile)
 
 
 #get the country index value of the excel file
-def CountryIndex(conName):
-    index_value = readxlsx.index[readxlsx['country'] == conName].tolist()[0]
+def CountryIndex(conName, excelFilePath):
+    index_value = excelFilePath.index[excelFilePath['country'] == conName].tolist()[0]
     return index_value
     
 
 #get a specific value of any column based on the country index value      
-def GetColumnValue(indexValue, columnName):
-    value = readxlsx.iloc[indexValue][columnName]
+def GetColumnValue(indexValue, columnName, excelFilePath):
+    value = excelFilePath.iloc[indexValue][columnName]
     return float(value)
     
 
@@ -32,8 +42,8 @@ def GetColumnValue(indexValue, columnName):
 def CountryInputToUpper(entryTxt):
     toAList = entryTxt.split(" ")
     wordsToUpper = list(map(lambda words: words.capitalize(), toAList))
-    toString = " ".join(wordsToUpper)
-    return toString
+    countrytoString = " ".join(wordsToUpper)
+    return countrytoString
 
 
 #display all the commands
@@ -87,10 +97,10 @@ def DeathResults():
 
     try:
 
-        index = CountryIndex(countryName)
-        totalDeaths  = GetColumnValue(index, "total")
-        maleDeaths   = GetColumnValue(index, "male")
-        femaleDeaths = GetColumnValue(index, "female")
+        index = CountryIndex(countryName, readxdfile)
+        totalDeaths  = GetColumnValue(index, "total", readxdfile)
+        maleDeaths   = GetColumnValue(index, "male", readxdfile)
+        femaleDeaths = GetColumnValue(index, "female", readxdfile)
         
         print(f"{index} Total deaths:{int(totalDeaths)}  male:{maleDeaths}%  female:{femaleDeaths}%")
 
@@ -100,6 +110,34 @@ def DeathResults():
         print("Incorrect country name please try again.")
         commands()
 
+
+
+def PlotVaccinationResults(maleVax, femaleVax):
+    fig, ax = plt.subplots()
+
+    gender = ["Male", "Female"]
+    count  = [maleVax, femaleVax]
+    
+    ax.pie(count, labels=gender)
+    
+                 
+
+
+def VaxResults():
+    countryInput = input("Insert a country name: ")
+    countryName  = CountryInputToUpper(countryInput)
+
+    # try:
+    index = CountryIndex(countryName, readxvfile)
+    #totalVax = GetColumnValue(index, "Total", readxvfile)
+    maleVax  = GetColumnValue(index, "Male", readxvfile)
+    femaleVax = GetColumnValue(index, "Female", readxvfile)
+    #print(f"{index} Total vaccinations {totalVax} male:{maleVax} female:{femaleVax}")
+
+    PlotVaccinationResults(maleVax, femaleVax)
+    # except:
+    #     print("error")
+    #     commands()
 
 #main function
 def main():
@@ -112,6 +150,9 @@ def main():
 
         if(command == "ld"):
             DeathResults()
+
+        elif(command == "fv"):
+            VaxResults()
 
         elif(command == "cmd"):
             commands()
