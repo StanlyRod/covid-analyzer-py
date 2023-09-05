@@ -30,13 +30,19 @@ readxvfile = ReadExcelFile(vfile)
 def CountryIndex(conName, excelFilePath):
     index_value = excelFilePath.index[excelFilePath['country'] == conName].tolist()[0]
     return index_value
+
     
 
 #get a specific value of any column based on the country index value      
 def GetColumnValue(indexValue, columnName, excelFilePath):
     value = excelFilePath.iloc[indexValue][columnName]
-    return float(value)
+    if("," in str(value)):
+        newValue = value.replace(",", "")
+        return float(newValue)
+    else:
+        return float(value)
     
+
 
 #Convert the first letter of each word in the input to upper-case
 def CountryInputToUpper(entryTxt):
@@ -102,42 +108,51 @@ def DeathResults():
         maleDeaths   = GetColumnValue(index, "male", readxdfile)
         femaleDeaths = GetColumnValue(index, "female", readxdfile)
         
-        print(f"{index} Total deaths:{int(totalDeaths)}  male:{maleDeaths}%  female:{femaleDeaths}%")
+        print(f"Total deaths:{int(totalDeaths)}  male:{maleDeaths}%  female:{femaleDeaths}%")
 
         PlotDeathsResults(maleDeaths, femaleDeaths, countryName, totalDeaths)
 
     except (IndexError, NameError, TypeError):
-        print("Incorrect country name please try again.")
+        print("Incorrect country name or the country is not listed in the database, please try again.")
         commands()
 
 
-
-def PlotVaccinationResults(maleVax, femaleVax):
+#plot results in pie chart
+def PlotVaccinationResults(maleVax, femaleVax, couName, totalVac):
     fig, ax = plt.subplots()
+    fig.set_facecolor("black") #background in black color
 
-    gender = ["Male", "Female"]
+
+    gender = ["Male \n{:,}".format(round(maleVax)), "Female \n{:,}".format(round(femaleVax))]
     count  = [maleVax, femaleVax]
+
+    ax.set_title(f"Total Number of Vaccinated People in {couName} " + "{:,}".format(round(totalVac)), color="white")
+    ax.pie(count, labels=gender, autopct='%1.1f%%', pctdistance=.5, labeldistance=1.2, startangle=140, colors=['silver', 'orange'])
     
-    ax.pie(count, labels=gender)
+    for text in ax.texts:
+        text.set_color("white")
+    plt.show()
     
                  
 
-
+#display the vaccionations final results
 def VaxResults():
     countryInput = input("Insert a country name: ")
     countryName  = CountryInputToUpper(countryInput)
 
-    # try:
-    index = CountryIndex(countryName, readxvfile)
-    #totalVax = GetColumnValue(index, "Total", readxvfile)
-    maleVax  = GetColumnValue(index, "Male", readxvfile)
-    femaleVax = GetColumnValue(index, "Female", readxvfile)
-    #print(f"{index} Total vaccinations {totalVax} male:{maleVax} female:{femaleVax}")
+    try:
+        index = CountryIndex(countryName, readxvfile)
+        totalVax = GetColumnValue(index, "Total", readxvfile)
+        maleVax  = GetColumnValue(index, "Male", readxvfile)
+        femaleVax = GetColumnValue(index, "Female", readxvfile)
 
-    PlotVaccinationResults(maleVax, femaleVax)
-    # except:
-    #     print("error")
-    #     commands()
+        PlotVaccinationResults(maleVax, femaleVax, countryName, totalVax)
+
+    except(IndexError, NameError, TypeError):
+        print("Incorrect country name or the country is not listed in the database, please try again.")
+        commands()
+
+
 
 #main function
 def main():
