@@ -1,9 +1,10 @@
 # covid-analyzer-py
-Personal project to analyze disaggregated data on covid statistics
+<h1>Personal project to analyze disaggregated data on covid statistics</h1>
 
-How to use it ?
+<h1>How to use it ?</h1>
 
-1
+<h3>1</h3>
+<br/>
 Is recommended to create a python virtual environment, for that run the following command in the terminal:
 
 python -m venv canalyzer
@@ -13,7 +14,8 @@ python -m venv canalyzer
 <br/>
 <br/>
 
-2
+<h3>2</h3>
+<br/>
 Navigate through the virtual environment folder and open the Scripts directory and run the following command to activate the virtual environment:
 
 Activate
@@ -23,7 +25,8 @@ Activate
 <br/>
 <br/>
 
-3
+<h3>3</h3>
+<br/>
 Create a new directory in the virtual environment folder and move all the files to the new directory and make sure that the excel files are in the same directory as the ca.py file
 
 <img width="404" alt="pic3" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/6f33ca26-9135-42d1-a206-dc4019a01d3c">
