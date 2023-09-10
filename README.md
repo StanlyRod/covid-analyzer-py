@@ -32,4 +32,20 @@ Activate
 <img width="404" alt="pic3" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/6f33ca26-9135-42d1-a206-dc4019a01d3c">
 <br/>
 <img width="258" alt="pic4" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/6f29c4e9-1abe-43db-92a0-dd5555e193f7">
+<br/>
+<br/>
+<br/>
+
+<h5>4</h5>
+<br/>
+<p>
+  Inside the new directory with all necessary files in this case the src directory,
+  run the following command to install all the dependencies of the project:
+</p>
+
+pip install -r requirements.txt
+
+<img width="572" alt="pic5" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/0a477c4f-120c-48be-a303-617927ab9e19">
+
+
 
