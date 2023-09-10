@@ -77,7 +77,7 @@ def PlotDeathsResults(maleDeaths, femaleDeaths, conName, totalDeaths):
 
     ax.bar(gender, count, label=bars_label, color=bars_colors, width=0.4)
     ax.set_ylabel("Total deaths in percentage %", color='white')
-    ax.set_title(f"Total deaths in {conName} by gender {int(totalDeaths)}", color='white')
+    ax.set_title(f"Total deaths in {conName} " + "{:,}".format(int(totalDeaths)), color='white')
     ax.legend(title="Gender")
 
     #set frame width 
@@ -127,7 +127,7 @@ def PlotVaccinationResults(maleVax, femaleVax, couName, totalVac):
     count  = [maleVax, femaleVax]
 
     ax.set_title(f"Total Number of Vaccinated People in {couName} " + "{:,}".format(round(totalVac)), color="white")
-    ax.pie(count, labels=gender, autopct='%1.1f%%', pctdistance=.5, labeldistance=1.2, startangle=140, colors=['silver', 'orange'])
+    ax.pie(count, labels=gender, autopct='%1.1f%%', pctdistance=.5, labeldistance=1.2, startangle=140, colors=['silver', 'orange'], wedgeprops={'linewidth': 2, 'edgecolor': 'turquoise'})
     
     for text in ax.texts:
         text.set_color("white")
