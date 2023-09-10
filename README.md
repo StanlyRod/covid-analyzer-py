@@ -1,5 +1,5 @@
 # covid-analyzer-py
-<h1>Personal project to analyze disaggregated data on covid statistics</h1>
+<h2>Personal project to analyze disaggregated data on covid statistics</h2>
 
 <h3>How to use it ?</h3>
 
@@ -27,7 +27,7 @@ Activate
 
 <h5>3</h5>
 <br/>
-Create a new directory in the virtual environment folder and move all the files to the new directory and make sure that the excel files are in the same directory as the ca.py file
+<p>Create a new directory in the virtual environment folder and move all the files to the new directory and make sure that the excel files are in the same directory as the ca.py file</p>
 
 <img width="404" alt="pic3" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/6f33ca26-9135-42d1-a206-dc4019a01d3c">
 <br/>
