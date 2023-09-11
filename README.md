@@ -5,8 +5,10 @@
 <br/>
 <br/>
 
-<h3>NOTE</h3>
-<p>Not all the countries name in the deaths excel file are listed in the vaccinations excel file</p>
+<h3>NOTES</h3>
+<p>Not all the countries names in the deaths excel file are listed in the vaccinations excel file</p>
+<br/>
+<p>I would like to recommend the jupyter notebook file ca2.ipynb as an alternative to the ca.py python file</p>
 <br/>
 <br/>
 <h3>Usage</h3>
