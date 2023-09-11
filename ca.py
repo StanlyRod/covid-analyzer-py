@@ -22,7 +22,9 @@ def ReadExcelFile(xfile):
         sys.exit()
 
 
+#read the deaths excel file
 readxdfile = ReadExcelFile(dfile)
+#read the vaccinations excel file
 readxvfile = ReadExcelFile(vfile)
 
 
@@ -32,7 +34,6 @@ def CountryIndex(conName, excelFilePath):
     return index_value
 
     
-
 #get a specific value of any column based on the country index value      
 def GetColumnValue(indexValue, columnName, excelFilePath):
     value = excelFilePath.iloc[indexValue][columnName]
