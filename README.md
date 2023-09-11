@@ -1,6 +1,7 @@
 # covid-analyzer-py
 <h2>Personal project to analyze disaggregated data on covid statistics</h2>
 <p>The data analyzed in this project was collected from the website of https://globalhealth5050.org/</p>
+<p>Python version used in this project 3.10.7</p>
 <br/>
 <br/>
 <h3>How to use it ?</h3>
