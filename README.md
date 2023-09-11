@@ -58,13 +58,15 @@ pip install -r requirements.txt
   Run the ca.py file and introduce a command from the command menu.
 </p>
 <p>The ld command will visualyze the deaths data by country and gender.</p>
+<br/>
 <img width="451" alt="pic1" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/67afd0ee-634b-4760-a23e-c732d6bc59ae">
-<img width="448" alt="pic2" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/e26ade28-e11f-4708-ada6-63df44df7b01">
+<img width="454" alt="pic2" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/01881e84-e32d-4e8b-9f54-80eb31a755c2">
 <br/>
 <br/>
 
 <p>The fv command will visualize the vaccinations data by country and gender.</p>
-<img width="463" alt="pic3" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/a9888130-628d-456d-9ebf-243de33c45af">
+<br/>
+<img width="462" alt="pic3" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/762b6d13-a633-4714-a638-26d8e58ce761">
 <img width="473" alt="pic4" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/b023f04a-c7d7-4565-a10d-3ab21cb23693">
 
 
