@@ -42,7 +42,7 @@ Activate
 <br/>
 <p>
   Inside the new directory with all necessary files in this case the src directory,
-  run the following command to install all the dependencies of the project:
+  run the following command to install all the dependencies that the project needs:
 </p>
 
 pip install -r requirements.txt
@@ -57,7 +57,7 @@ pip install -r requirements.txt
 <p>
   Run the ca.py file and introduce a command from the command menu.
 </p>
-<p>The ld command will visualyze the deaths data by country and gender.</p>
+<p>The ld command will visualize the deaths data by country and gender.</p>
 <br/>
 <img width="451" alt="pic1" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/67afd0ee-634b-4760-a23e-c732d6bc59ae">
 <img width="454" alt="pic2" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/01881e84-e32d-4e8b-9f54-80eb31a755c2">
