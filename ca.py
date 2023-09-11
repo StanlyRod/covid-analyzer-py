@@ -1,4 +1,4 @@
-
+#Author: Ramon Stanly Rodriguez
 import pandas as pd
 import matplotlib.pyplot as plt
 import os
