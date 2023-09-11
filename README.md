@@ -4,7 +4,12 @@
 <p>Python version used in this project 3.10.7</p>
 <br/>
 <br/>
-<h3>How to use it ?</h3>
+
+<h3>NOTE</h3>
+<p>Not all the countries name in the deaths excel file are listed in the vaccinations excel file</p>
+<br/>
+<br/>
+<h3>Usage</h3>
 
 <h5>1</h5>
 <br/>
