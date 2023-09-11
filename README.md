@@ -48,6 +48,17 @@ Activate
 pip install -r requirements.txt
 
 <img width="572" alt="pic5" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/0a477c4f-120c-48be-a303-617927ab9e19">
+<br/>
+<br/>
+<br/>
 
+<h5>5</h5>
+<br/>
+<p>
+  Run the ca.py file and introduce a command from the command menu
+</p>
+<p>The ld command will analyze the deaths by country.</p>
+<img width="451" alt="pic1" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/67afd0ee-634b-4760-a23e-c732d6bc59ae">
+<img width="448" alt="pic2" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/e26ade28-e11f-4708-ada6-63df44df7b01">
 
 
