@@ -20,7 +20,7 @@ Is recommended to create a python virtual environment, for that run the followin
 
 python -m venv canalyzer
 
-<img width="416" alt="pic1" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/c4f4a863-25dd-4e96-9fca-c0ee731ce40c">
+<img width="416" alt="pic1" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/98e4edea-dea8-473a-83f9-4b90cb04b0f2">
 <br/>
 <br/>
 <br/>
@@ -31,7 +31,7 @@ Navigate through the virtual environment folder and open the Scripts directory a
 
 Activate
 
-<img width="442" alt="pic2" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/4c96542c-6c4e-413a-b4f1-1b859f05465e">
+<img width="442" alt="pic2" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/ccda9702-4f51-4485-a55b-d1976d499134">
 <br/>
 <br/>
 <br/>
@@ -40,9 +40,9 @@ Activate
 <br/>
 <p>Create a new directory in the virtual environment folder and move all the files to the new directory and make sure that the excel files are in the same directory as the ca.py file</p>
 
-<img width="404" alt="pic3" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/6f33ca26-9135-42d1-a206-dc4019a01d3c">
+<img width="404" alt="pic3" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/4e4527a6-855a-4bbd-a01e-a7b07011044f">
 <br/>
-<img width="258" alt="pic4" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/6f29c4e9-1abe-43db-92a0-dd5555e193f7">
+<img width="258" alt="pic4" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/d98d95d4-159e-4c88-ab3a-e056310375f7">
 <br/>
 <br/>
 <br/>
@@ -56,7 +56,7 @@ Activate
 
 pip install -r requirements.txt
 
-<img width="572" alt="pic5" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/0a477c4f-120c-48be-a303-617927ab9e19">
+<img width="572" alt="pic5" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/8b2bca51-e8ab-40b6-9364-766fe2278131">
 <br/>
 <br/>
 <br/>
