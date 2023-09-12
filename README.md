@@ -68,15 +68,16 @@ pip install -r requirements.txt
 </p>
 <p>The ld command will visualize the deaths data by country and gender.</p>
 <br/>
-<img width="451" alt="pic6" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/67afd0ee-634b-4760-a23e-c732d6bc59ae">
-<img width="454" alt="pic7" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/01881e84-e32d-4e8b-9f54-80eb31a755c2">
+<img width="451" alt="pic6" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/7e733ca5-abf1-46c9-9b74-165f080d73b6">
+<img width="454" alt="pic7" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/d5c383a9-89d4-4f97-90c9-8665f85fedca">
 <br/>
 <br/>
 
 <p>The fv command will visualize the vaccinations data by country and gender.</p>
 <br/>
-<img width="462" alt="pic8" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/762b6d13-a633-4714-a638-26d8e58ce761">
-<img width="473" alt="pic9" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/b023f04a-c7d7-4565-a10d-3ab21cb23693">
+<img width="462" alt="pic8" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/bf6dfd92-2ea7-4ebe-b399-ea4b60cdf849">
+<img width="473" alt="pic9" src="https://github.com/StanlyRod/covid-analyzer-py/assets/76764572/7b17110e-a90e-40d8-b60b-d98bec79c99c">
+
 
 
 
