@@ -4,22 +4,24 @@ import matplotlib.pyplot as plt
 import os
 import sys
 
-#get current directory
+# Get current directory
 currentDirectory = os.getcwd()
 
-dfile = f"{currentDirectory}\deaths.xlsx"
-vfile = f"{currentDirectory}\\full_vaccinations.xlsx"
+# Fix the file paths using raw strings or double backslashes
+dfile = rf"{currentDirectory}\deaths.xlsx"
+vfile = rf"{currentDirectory}\full_vaccinations.xlsx"
 
-
-#read excel files and catch the filenotfound error exception
+# Read excel files and catch the FileNotFoundError exception
 def ReadExcelFile(xfile):
-     try:
+    try:
         readxfile = pd.read_excel(xfile)
         return readxfile
-
-     except FileNotFoundError as fne:
-        print(f"File or directory not found  {fne.filename}")
+    except FileNotFoundError as fne:
+        print(f"File or directory not found: {fne.filename}")
         sys.exit()
+
+# The rest of your code remains unchanged...
+
 
 
 #read the deaths excel file
